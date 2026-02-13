@@ -9,6 +9,9 @@ const dbConfig = {
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'ferreteria_db',
+  ssl: {
+    rejectUnauthorized: false
+  },
   // Configuraciones adicionales para producción
   waitForConnections: true,
   connectionLimit: 10,
